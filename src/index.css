@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+
+  --color-natural-bg: #F5F2ED;
+  --color-natural-primary: #5A5A40;
+  --color-natural-secondary: #BC6C25;
+  --color-natural-accent: #DDA15E;
+  --color-natural-grass: #A3B18A;
+  --color-natural-fruit: #E76F51;
+  --color-natural-ink: #5A5A40;
+}
+
+@layer base {
+  body {
+    @apply bg-natural-bg text-natural-ink font-sans antialiased overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/30 backdrop-blur-md border border-white/20;
+  }
+  
+  .panel-shadow {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  }
+}
